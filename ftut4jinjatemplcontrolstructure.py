@@ -17,12 +17,6 @@ def welcome():
 
 @app.route('/success/<int:score>')
 def success(score):
-    # res=""
-    # if score>=50:
-    #     res="PASS"
-    # else:
-    #     res='FAIL'
-    # exp={'score':score,'res':res}
     return render_template('controlstructureresult.html',result=score)
 
 

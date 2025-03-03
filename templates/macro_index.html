@@ -1,0 +1,17 @@
+{% extends "macro_base.html" %}
+
+{% macro render_item(item) %}
+    <div class="item">
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.description }}</p>
+    </div>
+{% endmacro %}
+
+{% block content %}
+    <h1>Items List</h1>
+    <div class="items">
+        {% for item in items %}
+            {{ render_item(item) }}
+        {% endfor %}
+    </div>
+{% endblock %}
