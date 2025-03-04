@@ -1,0 +1,12 @@
+{# macros.html #}
+<!-- you must call {{ kwargs }} once in macro body without 
+ declaring it in macro argument list.  -->
+ 
+{% macro render_item() %}
+    * {{kwargs}}
+    <div class="item">
+            <h2>title: {{ kwargs['title'] }}</h2>
+            <p>description: {{ kwargs['description'] }}</p>
+            <p>price: ${{ kwargs['price'] }}</p>
+    </div>
+{% endmacro %}
